@@ -39,6 +39,13 @@ spring:
             token-uri: https://oauth2.googleapis.com/token
             user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
 
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+  default-produces-media-type: application/json
+
 jwt:
   # secret: ${256-bit-secret-key - % Base64 Encoding}
   secret: ${SECRET_KEY}
@@ -49,3 +56,9 @@ logging:
   level:
     org.hibernate.SQL: debug
     org.springframework.security: debug
+    com.example.newstracker.domain.news.client: DEBUG
+
+
+naver:
+  client-id: ${NAVER_CLIENT_ID}
+  client-secret: ${NAVER_CLIENT_SECRET}

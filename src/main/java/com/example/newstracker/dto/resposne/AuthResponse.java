@@ -1,4 +1,4 @@
-package com.example.newstracker.dto;
+package com.example.newstracker.dto.resposne;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
