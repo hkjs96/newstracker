@@ -6,6 +6,7 @@ import com.example.newstracker.domain.news.News;
 import com.example.newstracker.domain.news.service.NewsService;
 import com.example.newstracker.dto.resposne.NewsResponseDto;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@SecurityRequirement(name = "JWT")
 @Tag(name = "News", description = "뉴스 수집/조회 API")
 @RestController
 @RequestMapping("/api/news")
